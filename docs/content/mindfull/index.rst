@@ -24,7 +24,7 @@ a tensor library with indices mapped to matrices.  For this reason, I
 introduced the concept of **blocs** which can be seen as hierarchical
 matrices in multidimensional tensor spaces.  The *blocs* are simply a
 map (*std::map*) between tensor indices (*std::tuple*) and a dense
-tensor (*std::vector*).
+array (*std::vector*).
 
 .. code:: cpp
     

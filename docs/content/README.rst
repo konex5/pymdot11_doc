@@ -27,8 +27,7 @@ source code `there <https://github.com/nokx5/pyfhmdot>`_.
 The dependency
 ==============
 
-* mdot (C++) -- `Optional`
-* fhmdot (C++/pybind11) -- `Optional`
+* mdot (C++/pybind11) -- `Optional`
 * numpy
 * scipy
 * h5py
@@ -53,7 +52,7 @@ Open python and invoke
 Install the software
 --------------------
 
-You can use pip but the optional dependencies would need to be compiled by hand from C++.
+You can use `pip <https://python.com>`_ but the optional dependencies would need to be compiled by hand from C++.
 Start by cloning all dependencies locally using
 `git repository <https://github.com/nokx5/pyfhmdot>`_.
 
@@ -63,15 +62,11 @@ Code Snippets
 
 .. code:: shell
 
-    black .
-
-    nixpkgs-fmt .
-
     pip install $(cat requirements.txt) # works for pure python only
 
     pip list --format=freeze | sed 's/==/>=/g' > requirements.txt
 
-    python -m pytest -k "not bronze"
+    python -m pytest -k "not test"
 
 =======
 License
