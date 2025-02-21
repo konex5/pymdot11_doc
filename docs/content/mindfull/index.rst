@@ -9,7 +9,7 @@ precision in order to converge for large system sizes.  It is
 furthermore frustrating to understand that the *difficult* and
 *interesting* systems are anyway limited due to **entanglement
 entropy** when eigenvalues are too close to degeneracy. Those **hard
-manybody systems** are mainly chaotic studies question.
+manybody systems** are anyway chaotic studies question.
 
 However, I found the high performance computing coding, the **HPC**
 problem of DMRG, quite challenging. I wanted to implement a **quantum
