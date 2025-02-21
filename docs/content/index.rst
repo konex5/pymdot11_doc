@@ -1,15 +1,15 @@
-.. golden documentation master file, created by
+.. pyfhmdot documentation master file, created by
    sphinx-quickstart on Wed Jan  6 08:48:46 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 .. this is the Welcome page
 
-==========================================
-Welcome to the golden python documentation
-==========================================
+=====================================
+Welcome to the pyfhmdot documentation
+=====================================
 
-Write enjoyable documentation! 
+Write enjoyable documentation!
 
 .. this is the README page
 

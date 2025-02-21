@@ -1,6 +1,6 @@
 Reference
 =========
 
-.. automodule:: golden
-   :members: Hello, Bye
+.. automodule:: pyfhmdot
+   :members: None
 

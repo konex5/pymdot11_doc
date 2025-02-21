@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath(os.getenv("ROOTDIR", "../..")))  # for autodo
 
 # -- Project information -----------------------------------------------------
 
-project = "golden-python"
+project = "pyfhmdot"
 copyright = "MIT"
 author = "info@nokx.ch"
 
