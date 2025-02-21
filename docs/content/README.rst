@@ -25,36 +25,53 @@ source code `there <https://github.com/nokx5/pyfhmdot>`_.
              hand.
 
 The dependency
-========================
+==============
 
-* mdot (C++)
-* fhmdot (C++/pybind11)
+* mdot (C++) -- `Optional`
+* fhmdot (C++/pybind11) -- `Optional`
 * numpy
-* scipy (pytests)
-* sphinx (docs)
+* scipy
+* h5py
 
+About
+=====
+
+The DMRG simulations within this project have the specificity to provide quantum
+number conservation algorithm without any quantum number representation. This makes
+the simulation closer to the task of the computer and avoid reshuffeling the different
+blocs. 
+
+Furthermore, the project was built with the idea to be able to go down to the
+C++ level at any time (with **mdot** and **fhmdot**). Theoretically, one could improve by implementing :
+
+* a parallel algorithm on the different blocs and in theory even chain the operations.
+* a static allocation of the blocs (nightmare to implement).
+
+In practice, most DMRG developers are simply happy when the code works and for this reason, everything 
+is available in pure python.
 
 Use the software
 ================
 
 Open python and invoke
 
-.. code:: shell
+.. code:: python
 
-    import pyfhmdot as pyf
-    import numpy as np
-    a = pyf.import({(1,1,1,1) : np.ndarray([[[[1]]]]))
-    b = pyf.import({(1,1,1,1) : np.ndarray([[[[1]]]]))
-    theta = pyf.import({(1,1,1,1) : np.ndarray([[[[1]]]]))
-    c = pyf.apply(theta,pyfa,pyfb)
+    >>> from pyfhmdot.models.pyoperators import single_operator
+    
+    >>> single_operator("sh_sz_u1", 1 / 2.) # sz is a pauli matrix
+    {(0, 0): array([[0.5]]), (1, 1): array([[-0.5]])}
+
+    >>> single_operator("sh_sy_u1", 1 / 2.) # sy is a pauli matrix
+    {(0, 1): array([[0.-0.5j]]), (1, 0): array([[0.+0.5j]])}
 
 
 Install the software
 --------------------
 
-You can not use pip since one of the dependency is compiled from C++.
+You can use pip but the optional dependencies would need to be compiled by hand from C++.
 Start by cloning all dependencies in the same folder. You can clone
-`git repository <https://github.com/nokx5/pyfhmdot>`_ them locally.
+`git repository <https://github.com/nokx5/pyfhmdot>`_ locally.
 
 =============
 Code Snippets
