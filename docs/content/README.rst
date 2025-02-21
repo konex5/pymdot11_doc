@@ -4,12 +4,8 @@
 Welcome to the `pyfhmdot`_ project!
 ========================================
 
-|CILinuxBadge|_ |CIDarwinBadge|_ |DocBadge|_ |LicenseBadge|_
+ |DocBadge|_ |LicenseBadge|_
 
-.. |CILinuxBadge| image:: https://github.com/nokx5/pyfhmdot/workflows/CI-linux/badge.svg
-.. _CILinuxBadge: https://github.com/nokx5/pyfhmdot/actions/workflows/ci-linux.yml
-.. |CIDarwinBadge| image:: https://github.com/nokx5/pyfhmdot/workflows/CI-darwin/badge.svg
-.. _CIDarwinBadge: https://github.com/nokx5/pyfhmdot/actions/workflows/ci-darwin.yml
 .. |DocBadge| image:: https://github.com/nokx5/pyfhmdot/workflows/doc-api/badge.svg
 .. _DocBadge: https://nokx5.github.io/pyfhmdot
 .. |LicenseBadge| image:: http://img.shields.io/badge/license-MIT-blue.svg
