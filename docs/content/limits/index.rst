@@ -8,9 +8,9 @@ limits of those simulations come from the so called maximal bond dimension
 :math:\chi. Of course, this dimension is reached when the entanglement 
 of the particles in the system exceeds the ability of the matrix product 
 state to describe them. Thus a good criterion to stop the simulation 
-would theoreticaly be once we reach the bond dimension -- because the 
+would theoretically be once we reach the bond dimension -- because the 
 matrix product state is not able to describe the system within the 
-wished precision anymore. In practice, this arises to early and one could 
+wished precision anymore. In practice, this arises too early and one could 
 track the precision lost long after the maximal bond dimension was reached.
 
 Furthermore, running simulations with increased bond dimension can give
@@ -30,5 +30,5 @@ my case a factor 8):
 
 The total bond dimension corresponds to the total singular values that we keep 
 in the system. Since the original formulation of DMRG, the density matrix is the 
-central reason of those simulations. Remember, the singular values squared corresponds to 
+central motivation in those simulations. Remember, the singular values squared corresponds to 
 the eigenvalues of the system in density formulation form.
