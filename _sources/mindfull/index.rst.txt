@@ -40,9 +40,11 @@ Note that one could statically allocate those blocs by giving a priori
 *indices* -- and one could replace *std::vector* with *std::array*.
 This is in practice hard to implement in procedural languages.
 
-The surprise I got while looking closely to a *hamiltonian matrix product operator* form is 
-that it span naturally the space of an *exact diagonalization* problem 
-(quite logic indeed). I would like to add a nice Lin tables to map mpo to the right block of purpose but it remains all theoretical at this point.
+The surprise I got while looking closely to a *hamiltonian matrix
+product operator* form is that it span naturally the space of an
+*exact diagonalization* problem (quite logic indeed). I would like to
+add a nice Lin tables to map mpo to the right block of purpose but it
+remains all theoretical at this point.
 
 Please find,
 
