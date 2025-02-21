@@ -6,15 +6,15 @@ Welcome to the `pyfhmdot`_ project!
 
  |DocBadge|_ |LicenseBadge|_
 
-.. |DocBadge| image:: https://github.com/nokx5/pymdot11/workflows/doc-api/badge.svg
-.. _DocBadge: https://nokx5.github.io/pymdot11_doc
+.. |DocBadge| image:: https://github.com/konex5/pymdot11/workflows/doc-api/badge.svg
+.. _DocBadge: https://konex5.github.io/pymdot11_doc
 .. |LicenseBadge| image:: http://img.shields.io/badge/license-MIT-blue.svg
-.. _LicenseBadge: https://github.com/nokx5/pyfhmdot/blob/master/LICENSE
+.. _LicenseBadge: https://github.com/konex5/pyfhmdot/blob/master/LICENSE
 
 This project consists in giving a nice gate application interface to
 the python layer in a way one can chain them easily. Please find below
-the documentation `here <https://nokx5.github.io/pyfhmdot>`_ and the
-source code `there <https://github.com/nokx5/pyfhmdot>`_.
+the documentation `here <https://konex5.github.io/pymdot11_doc>`_ and the
+source code `there <https://github.com/konex5/pymdot11>`_.
 
 .. warning:: **NOTE:** the project is developed using the nix ❄️
              packaging manager, but everything can be compiled by
@@ -50,7 +50,7 @@ Install the software
 
 You can use `pip <https://python.com>`_ but the optional dependencies would need to be compiled by hand from C++.
 Start by cloning all dependencies locally using
-`git repository <https://github.com/nokx5/pyfhmdot>`_.
+`git repository <https://github.com/konex5/pyfhmdot>`_.
 
 =============
 Code Snippets
