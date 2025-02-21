@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindfull &mdash; pyfhmdot 0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=837179f8"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Documentation" href="../examples/index.html" />
+    <link rel="prev" title="Limits" href="../limits/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pyfhmdot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../limits/index.html">Limits</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mindfull</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyfhmdot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mindfull</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/mindfull/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mindfull">
+<h1>Mindfull<a class="headerlink" href="#mindfull" title="Link to this heading"></a></h1>
+<p>According to my experience dealing with <strong>DMRG</strong> algorithm, I was not
+convinced by the method.  Indeed, those algorithms require to lose
+precision in order to converge for large system sizes.  It is
+furthermore frustrating to understand that the <em>difficult</em> and
+<em>interesting</em> systems are anyway limited due to <strong>entanglement
+entropy</strong> when eigenvalues are too close to degeneracy. Those <strong>hard
+manybody systems</strong> are anyway chaotic studies question.</p>
+<p>However, I found the high performance computing coding, the <strong>HPC</strong>
+problem of DMRG, quite challenging. I wanted to implement a <strong>quantum
+number-less</strong> version based on <em>quantum number representation</em>. This
+is probably a first step towards optimization. Indeed, no <em>search</em>
+algorithm is used on any basis, and thus more locality is ensure for
+the computer.</p>
+<p>Note that I have first implemented a class for tensor representation
+for <strong>mps</strong> and <strong>theta</strong> matrices form.  However, one would just need
+a tensor library with indices mapped to matrices.  For this reason, I
+introduced the concept of <strong>blocs</strong> which can be seen as hierarchical
+matrices in multidimensional tensor spaces.  The <em>blocs</em> are simply a
+map (<em>std::map</em>) between tensor indices (<em>std::tuple</em>) and a dense
+array (<em>std::vector</em>).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;map&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;tuple&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mp_blocs</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">theta_blocs</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Note that one could statically allocate those blocs by giving a priori
+<span class="math notranslate nohighlight">\(a^2 + \chi_\text{max}\)</span> maximal dimensions and a set of tuple
+<em>indices</em> – and one could replace <em>std::vector</em> with <em>std::array</em>.
+This is in practice hard to implement in procedural languages.</p>
+<p>The surprise I got while looking closely to a <em>hamiltonian matrix product operator</em> form is
+that it span naturally the space of an <em>exact diagonalization</em> problem
+(quite logic indeed). I would like to add a nice Lin tables to map mpo to the right block of purpose but it remains all theoretical at this point.</p>
+<p>Please find,</p>
+<ul class="simple">
+<li><p>a <strong>TDMRG</strong> simulation</p></li>
+<li><p>a <strong>0-DMRG</strong> simulation</p></li>
+<li><p>a <strong>t-DMRG</strong> simulation on both mixed or pure state</p></li>
+<li><p>a <strong>ED</strong> simulation</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../limits/index.html" class="btn btn-neutral float-left" title="Limits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../examples/index.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright MIT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
