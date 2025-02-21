@@ -42,8 +42,7 @@ This is in practice hard to implement in procedural languages.
 
 The surprise I got while looking closely to a *hamiltonian matrix product operator* form is 
 that it span naturally the space of an *exact diagonalization* problem 
-(quite logic indeed). Thus the  `pyfhmdot`_ library provides attempt for
-exact diagonalization as well.
+(quite logic indeed). I would like to add a nice Lin tables to map mpo to the right block of purpose but it remains all theoretical at this point.
 
 Please find,
 
