@@ -6,9 +6,9 @@ Table of contents
 .. toctree::
    :maxdepth: 3
 
-   
-   about/index.rst
+   mindfull/index.rst
    examples/index.rst
+   about/index.rst
 
 ==================
 Indices and tables
