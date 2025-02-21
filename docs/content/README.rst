@@ -68,6 +68,18 @@ Code Snippets
 
     python -m pytest -k "not test"
 
+===================
+Build Documentation
+===================
+
+.. code:: shell
+
+    cd docs
+
+    make html
+
+    browse build-target/html/index.html
+
 =======
 License
 =======
