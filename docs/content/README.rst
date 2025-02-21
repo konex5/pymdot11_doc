@@ -1,4 +1,4 @@
-.. _pyfhmdot: https://nokx5.github.io/golden-python
+.. _pyfhmdot: https://konex5.github.io/pymdot11_doc
 
 ========================================
 Welcome to the `pyfhmdot`_ project!
@@ -6,7 +6,7 @@ Welcome to the `pyfhmdot`_ project!
 
  |DocBadge|_ |LicenseBadge|_
 
-.. |DocBadge| image:: https://github.com/nokx5/pyfhmdot/workflows/doc-api/badge.svg
+.. |DocBadge| image:: https://github.com/nokx5/pymdot11/workflows/doc-api/badge.svg
 .. _DocBadge: https://nokx5.github.io/pymdot11_doc
 .. |LicenseBadge| image:: http://img.shields.io/badge/license-MIT-blue.svg
 .. _LicenseBadge: https://github.com/nokx5/pyfhmdot/blob/master/LICENSE
